@@ -99,6 +99,45 @@ improve knowledge reuse across teams
 increase transparency in AI decision-making
 
 
+# Project Structure
+
+capa-autonomous-investigation/
+├── src/
+│   ├── agent_orchestration/
+│   │   ├── __init__.py
+│   │   ├── supervisor_team.py           # Main orchestration team
+│   │   ├── agents/
+│   │   │   ├── __init__.py
+│   │   │   ├── planner_agent.py
+│   │   │   ├── executor_agent.py
+│   │   │   ├── rag_retrieval_agent.py
+│   │   │   ├── sql_analysis_agent.py
+│   │   │   ├── document_analysis_agent.py
+│   │   │   ├── causal_analysis_agent.py
+│   │   │   ├── root_cause_agent.py
+│   │   │   ├── debate_agent.py
+│   │   │   ├── self_reflection_agent.py
+│   │   │   ├── hallucination_guard_agent.py
+│   │   │   ├── compliance_agent.py
+│   │   │   ├── report_generator_agent.py
+│   │   │   └── learning_agent.py
+│   │   └── tools/
+│   │       ├── __init__.py
+│   │       ├── vector_search_tool.py
+│   │       ├── sql_query_tool.py
+│   │       ├── document_retrieval_tool.py
+│   │       ├── dowhy_causal_tool.py
+│   │       └── report_generation_tool.py
+│   ├── api_gateway/
+│   ├── streamlit_app/
+│   └── databricks_integration/
+├── requirements.txt
+└── .env
+
+
+
+
+
 
 
 
