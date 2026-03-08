@@ -101,6 +101,7 @@ increase transparency in AI decision-making
 
 # Project Structure
 
+
 capa-autonomous-investigation/
 ├── src/
 │   ├── agent_orchestration/
@@ -133,7 +134,6 @@ capa-autonomous-investigation/
 │   └── databricks_integration/
 ├── requirements.txt
 └── .env
-
 
 
 
