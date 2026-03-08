@@ -11,7 +11,7 @@ Specifically, the system aims to:
 • generate regulatory investigation reports
 • continuously learn from new investigations
 
-Why This Architecture Was Chosen
+##Why This Architecture Was Chosen
 Traditional AI chatbots are insufficient for complex engineering investigations because they lack:
 structured reasoning
 data integration
@@ -25,7 +25,7 @@ analyzing structured production data
 performing causal analysis
 validating reasoning
 enforcing regulatory structure
-This design provides:
+###This design provides:
 1. Modularity
 Each capability is implemented as an independent agent that can evolve separately.
 2. Explainability
@@ -36,7 +36,7 @@ Guardrails such as hallucination detection and debate agents improve answer qual
 The system stores new investigation results in a vector database so that future cases benefit from past knowledge.
 
 
-Key Technologies Used
+##Key Technologies Used
 The system integrates several modern AI technologies:
 AutoGen v5
 Used to orchestrate multi-agent collaboration and task planning.
@@ -52,7 +52,8 @@ TruLens
 Evaluates model hallucination risk and grounding quality.
 Streamlit
 Provides an interactive investigation dashboard for users.
-System Components
+
+##System Components
 The system consists of five major layers.
 1. User Interface
 A Streamlit dashboard allows engineers to submit investigation queries and review results.
@@ -68,21 +69,29 @@ document analysis
 causal inference
 5. Data Layer
 All investigation data is stored in a Databricks Lakehouse environment.
-Key Features
+
+##Key Features
 The system includes several advanced AI capabilities rarely implemented together.
 Multi-Agent Collaboration
+
 14 specialized AI agents collaborate to perform investigations.
+
 Debate Reasoning
 Multiple agents propose and challenge root cause hypotheses.
+
 Self-Reflection
 An agent evaluates reasoning quality before producing final results.
+
 Hallucination Detection
 Guardrails ensure answers remain grounded in evidence.
+
 Continuous Learning
 The system stores new investigations in a vector database for future retrieval.
+
 Regulatory Reporting
 Outputs are structured to align with FDA and ISO CAPA documentation.
-Expected Outcomes
+
+##Expected Outcomes
 This system demonstrates how modern agentic AI can:
 accelerate engineering investigations
 reduce time spent searching historical data
