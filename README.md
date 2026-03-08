@@ -1,6 +1,6 @@
-# Agentic_AI_Autogen
+# Multi-Agent AI System for Medical Device CAPA Investigation
 
-**Project Objective
+##Project Objective
 
 The objective of this project is to demonstrate how agentic AI systems can support quality engineering teams in medical device organizations.
 Specifically, the system aims to:
