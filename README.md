@@ -1,5 +1,7 @@
 # Agentic_AI_Autogen
-Project Objective
+
+**Project Objective
+
 The objective of this project is to demonstrate how agentic AI systems can support quality engineering teams in medical device organizations.
 Specifically, the system aims to:
 • accelerate defect investigation
