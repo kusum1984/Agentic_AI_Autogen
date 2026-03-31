@@ -138,12 +138,6 @@ capa-autonomous-investigation/
 
 
 ### System Architecture Diagram (High-Level)
-
-<img width="641" height="599" alt="image" src="https://github.com/user-attachments/assets/0b31e635-cdc3-477d-bbca-c527c67b58de" />
-
-<img width="524" height="547" alt="image" src="https://github.com/user-attachments/assets/e876954e-d2e1-49f0-9b64-4a981b081716" />
-
-
 This diagram shows the complete enterprise architecture including UI, agents, tools, and Databricks infrastructure.
 ┌──────────────────────────────────────────────────────────┐
 │                        USER                              │
