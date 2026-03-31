@@ -137,7 +137,90 @@ capa-autonomous-investigation/
 
 
 
-
+###System Architecture Diagram (High-Level)
+This diagram shows the complete enterprise architecture including UI, agents, tools, and Databricks infrastructure.
+┌──────────────────────────────────────────────────────────┐
+│                        USER                              │
+│                Quality Engineer / Analyst                │
+└──────────────────────────────────────────────────────────┘
+                           │
+                           ▼
+┌──────────────────────────────────────────────────────────┐
+│                     STREAMLIT UI                         │
+│ Investigation dashboard                                  │
+│ - submit defect report                                   │
+│ - view investigation results                             │
+└──────────────────────────────────────────────────────────┘
+                           │
+                           ▼
+┌──────────────────────────────────────────────────────────┐
+│                    FASTAPI GATEWAY                       │
+│ Request routing / authentication                         │
+└──────────────────────────────────────────────────────────┘
+                           │
+                           ▼
+┌──────────────────────────────────────────────────────────┐
+│                AGENT ORCHESTRATION LAYER                 │
+│                                                          │
+│  ┌──────────────────────────────────────────────────┐    │
+│  │              SUPERVISOR AGENT                    │    │
+│  │ Controls investigation workflow                  │    │
+│  └──────────────────────────────────────────────────┘    │
+│                           │                              │
+│                           ▼                              │
+│  ┌──────────────────────────────────────────────────┐    │
+│  │                 PLANNER AGENT                    │    │
+│  │ Breaks problem into investigation tasks          │    │
+│  └──────────────────────────────────────────────────┘    │
+│                           │                              │
+│                           ▼                              │
+│  ┌──────────────────────────────────────────────────┐    │
+│  │                 EXECUTOR AGENT                   │    │
+│  │ Dispatches tasks to analysis agents              │    │
+│  └──────────────────────────────────────────────────┘    │
+│                                                          │
+│  Investigation Agents                                    │
+│  ───────────────────────────────────────────────         │
+│  • RAG Retrieval Agent                                   │
+│  • SQL Data Analysis Agent                               │
+│  • Document Analysis Agent                               │
+│  • Causal Analysis Agent (DoWhy)                         │
+│  • Root Cause Investigator                               │
+│  • Debate Agents (Hypothesis testing)                    │
+│  • Self Reflection Agent                                 │
+│  • Hallucination Guard Agent                             │
+│  • Compliance Agent                                      │
+│  • Report Generator Agent                                │
+│  • Learning Agent                                        │
+└──────────────────────────────────────────────────────────┘
+                           │
+                           ▼
+┌──────────────────────────────────────────────────────────┐
+│                       TOOL LAYER                         │
+│                                                          │
+│ Vector Search Tool                                       │
+│ SQL Query Tool                                           │
+│ Document Retrieval Tool                                  │
+│ DoWhy Causal Analysis Tool                               │
+│ Report Generation Tool                                   │
+└──────────────────────────────────────────────────────────┘
+                           │
+                           ▼
+┌──────────────────────────────────────────────────────────┐
+│                DATABRICKS LAKEHOUSE                      │
+│                                                          │
+│ Delta Tables                                             │
+│ CAPA Investigations                                      │
+│ Manufacturing Data                                       │
+│                                                          │
+│ Vector Search                                            │
+│ CAPA Knowledge Base                                      │
+│ SOP Documentation                                        │
+│                                                          │
+│ MLflow                                                   │
+│ Experiment Tracking                                      │
+│ Model Evaluation                                         │
+└──────────────────────────────────────────────────────────┘
 
 
 
